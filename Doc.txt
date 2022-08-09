@@ -1,0 +1,59 @@
+https://dev.to/dennisivy11/easiest-django-postgres-connection-ever-with-railway-11h6
+
+
+railway account:
+wulfidragon@g 
+
+
+
+$ pip install django
+$ pip install psycopg2
+$ django-admin startproject railway_django
+$ cd railway_django
+
+
+DATABASES = {
+    'default': {
+        #'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
+    }
+}
+ 
+
+Postgres Database with Railway
+
+Railway has a great free tier so we wont need a card on file to start.
+
+Step 1: Create an account on railway.app
+
+Step 2: In your dashboard (railway.app/dashboard) click "+ New Project" and select "Provision PostgresSQL". It should take a few seconds for your database to be ready.
+
+
+This connection URL may seem like a bunch of random character's so lets extract all the values from this url by selecting the "Variables" tab if you want a more user friendly version of this connection.
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': '<PGDATABASE>',
+        'USER': '<PGUSER>',
+        'PASSWORD': '<PGPASSWORD>',
+        'HOST': '<PGHOST>',
+        'PORT': '<PGPORT>',
+    }
+}
+
+Migrate and View
+
+That's it for the connection! Go ahead and run python manage.py migrate and view your data in the data tab in your postgres database on railway.
+
+After that create superuser :
+
+Wulfi
+wulficode
+wUL
