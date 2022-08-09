@@ -76,15 +76,15 @@ WSGI_APPLICATION = "railway_django.wsgi.application"
 
 DATABASES = {
     'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'MdesqF4SZJPWwIX8Dcvv',
-        'HOST': 'containers-us-west-53.railway.app',
-        'PORT': '7206',
+        'NAME': '<PGDATABASE>',
+        'USER': '<PGUSER>',
+        'PASSWORD': '<PGPASSWORD>',
+        'HOST': '<PGHOST>',
+        'PORT': '<PGPORT>',
     }
 }
+
 
 
 # Password validation
